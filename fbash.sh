@@ -114,6 +114,6 @@ compose() {
     f1=$1; shift
     f2=$1; shift
     eval "$exportfun() {
-              $f1 \$($f2 \$*);
+              $f1 \"\$($f2 \"\$*\")\";
           }"
 }
